@@ -19,15 +19,13 @@ services:
       - yacyag-be
       - yacyag-ui
     environment:
-      - VIRTUAL_HOST=gear.print.jvoj.cz
-      - LETSENCRYPT_HOST=gear.print.jvoj.cz
+      - VIRTUAL_HOST=print-generator.app
+      - LETSENCRYPT_HOST=print-generator.app
       - LETSENCRYPT_EMAIL=vojira@gmail.com
       - VIRTUAL_PORT=80
     restart: unless-stopped
     stdin_open: true
     tty: true
-    ports:
-      - 8080:80
 networks:
   gear.print.jvoj.cz:
     external:
