@@ -7,12 +7,13 @@ services:
       - mongo
     image: docker.jvoj.cz/yacyag-be:latest
     volumes:
-      - /docker_volumes/gear.print.jvoj.cz/be:/usr/src/app/images
+      - /docker_volumes/B/gear.print.jvoj.cz/be/images:/usr/src/app/images
+      - /docker_volumes/B/gear.print.jvoj.cz/be/generated:/usr/src/app/generated
       - ./fe.env:/usr/src/app/.env
   mongo:
     image: mongo
     volumes:
-      - /docker_volumes/gear.print.jvoj.cz/mongo:/data/db
+      - /docker_volumes/B/gear.print.jvoj.cz/mongo:/data/db
   nginx:
     build: ./nginx
     depends_on:
