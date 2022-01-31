@@ -28,6 +28,6 @@ services:
     stdin_open: true
     tty: true
 networks:
-  gear.print.jvoj.cz:
+  print-generator.app:
     external:
-      name: gear.print.jvoj.cz
+      name: print-generator.app
